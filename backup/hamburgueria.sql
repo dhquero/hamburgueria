@@ -133,7 +133,7 @@ CREATE TABLE `item_pedido` (
 
 LOCK TABLES `item_pedido` WRITE;
 /*!40000 ALTER TABLE `item_pedido` DISABLE KEYS */;
-INSERT INTO `item_pedido` VALUES (1,1,'2',14.23,NULL),(1,2,'1',10.20,NULL),(2,2,'1',10.50,NULL),(2,3,'2',11.45,NULL),(3,3,'2',0.00,'SEM MAIONESE'),(3,4,'3',0.00,'MAIS BATATA'),(16,1,'4',0.00,NULL),(16,3,'2',0.00,'SEM MOLHO'),(17,1,'2',0.00,'TIRAR CARNE'),(17,3,'2',0.00,NULL),(18,3,'2',0.00,'A');
+INSERT INTO `item_pedido` VALUES (1,1,'2',14.23,NULL),(1,2,'1',10.20,NULL),(2,2,'1',10.50,NULL),(2,3,'2',11.45,NULL),(3,3,'2',0.00,'SEM MAIONESE'),(3,4,'3',0.00,'MAIS BATATA'),(16,1,'4',0.00,NULL),(16,3,'2',0.00,'SEM MOLHO'),(17,1,'2',0.00,'TIRAR CARNE'),(17,3,'2',0.00,NULL),(18,3,'2',0.00,'A'),(19,2,'3',0.00,'RETIRAR SALADA DE 1 UNDIADE'),(19,4,'3',0.00,NULL);
 /*!40000 ALTER TABLE `item_pedido` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -157,7 +157,7 @@ CREATE TABLE `pedido` (
   KEY `fk_id_colaborador_idx` (`id_colaborador`),
   CONSTRAINT `fk_id_cliente` FOREIGN KEY (`id_cliente`) REFERENCES `cliente` (`id`),
   CONSTRAINT `fk_id_colaborador` FOREIGN KEY (`id_colaborador`) REFERENCES `colaborador` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -166,7 +166,7 @@ CREATE TABLE `pedido` (
 
 LOCK TABLES `pedido` WRITE;
 /*!40000 ALTER TABLE `pedido` DISABLE KEYS */;
-INSERT INTO `pedido` VALUES (1,1,1,'2019-01-05 10:37:07',NULL,'em processamento'),(2,2,2,'2019-01-05 10:37:21',NULL,'aberto'),(3,0,1,'2019-01-05 10:37:36','TESTE ALTERACAO','aberto'),(4,1,2,'2019-01-05 10:37:36',NULL,'aberto'),(5,1,1,'2019-01-05 10:45:45',NULL,'aberto'),(6,0,1,'2019-01-05 12:55:25',NULL,'aberto'),(16,0,1,'2019-01-05 18:10:27','PEDIDO 15','aberto'),(17,0,1,'2019-01-05 20:18:25','OI','aberto'),(18,0,1,'2019-01-06 11:39:59','ALTERACAO DO PEDIDO','aberto');
+INSERT INTO `pedido` VALUES (1,1,1,'2019-01-05 10:37:07',NULL,'em processamento'),(2,2,2,'2019-01-05 10:37:21',NULL,'aberto'),(3,0,1,'2019-01-05 10:37:36','TESTE ALTERACAO','aberto'),(4,1,2,'2019-01-05 10:37:36',NULL,'aberto'),(5,1,1,'2019-01-05 10:45:45',NULL,'aberto'),(6,0,1,'2019-01-05 12:55:25',NULL,'aberto'),(16,0,1,'2019-01-05 18:10:27','PEDIDO 15','aberto'),(17,0,1,'2019-01-05 20:18:25','OI','aberto'),(18,0,1,'2019-01-06 11:39:59','ALTERACAO DO PEDIDO','aberto'),(19,0,1,'2019-01-06 13:11:47','LANCHES SEM CONDIMENTOS','aberto');
 /*!40000 ALTER TABLE `pedido` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -179,4 +179,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-01-06 12:53:49
+-- Dump completed on 2019-01-06 13:19:12
